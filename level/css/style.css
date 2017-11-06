@@ -1,0 +1,561 @@
+/*defaul styles*/
+body{
+  background-color: #272727;
+  /*cursor: none;*/
+}
+nav#top-nav
+{
+   background-color: #272727;
+   height:80px;
+   width:100%;
+   z-index: 1;
+   position: fixed;
+   left: -0.5vw;
+   top: 0;
+ }
+
+nav#top-nav>div:first-child
+{
+  float: left;
+  padding-top: 28px;
+  padding-left: 64px;
+
+}
+nav#top-nav>div
+{
+  float:right;
+  color:white;
+
+}
+nav#top-nav>div>ul>li,
+nav#top-nav h3,h1,
+nav#top-nav.logo
+{
+  float: right;
+  font-size: 18px;
+  padding-left: 2px;
+
+}
+
+nav#top-nav small
+{
+    display: block;
+
+}
+nav#top-nav>div>ul>li:only-child>a
+{
+  color:white;
+  padding-right:67px;
+  padding-top: 32px;
+  font-size: 24px;
+}
+
+nav#top-nav>div:nth-child(3)>ul
+{
+  padding-right: 105px;
+  padding-top: 20px;
+}
+
+nav#top-nav>div:nth-child(3)>ul>li>a
+{
+  color:white;
+  padding: 15px;
+}
+nav#top-nav>div:nth-child(4)
+{
+  padding-right:110px;
+  padding-top: 38px;
+  }
+  nav#top-nav>div:nth-child(4)>span>a
+  {
+    color: white;
+
+  }
+
+nav#top-nav>div h3 a
+{
+  color:white;
+}
+/**********************************************************************************/
+#front-carousel{
+  margin-top: 62px;
+
+}
+
+#slider{
+  /*border: 2px solid green;*/
+  width:300%;
+  height:90vh;
+  position: relative;
+  overflow:hidden;
+  /*text-align: center;*/
+  margin: 0 auto;
+}
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 300%;
+  height: 90vh;
+
+}
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+  height: 90vh;
+}
+
+
+  #slides .image figure{ /*все изображения справа друг от доруга*/
+  	width: 33.3%;
+    display: inline-block;
+    position: relative;
+   /*transition-duration: 15s;*/
+  animation: sliding 12s ;
+
+  }
+  /*#slides figure:hover{
+    animation-play-state:paused;
+  }*/
+
+  #front-carousel .image figcaption{
+    width: 15%;
+    height: 60vh;
+    /*border: 2px solid red;*/
+    position: absolute;;
+    top: 10%;
+    left: 30%;
+  }
+  #front-carousel .image figcaption div{
+    position: absolute;
+    background-color:  #cee002;
+  }
+  #front-carousel .image figcaption div.t{
+
+    height: 3px;
+    width: 100%;
+    top:0;
+    left:0;
+    animation: hor 3s;
+    animation-fill-mode: forwards;
+
+
+  }
+  #front-carousel .image figcaption div.r{
+
+    height:0% ;
+    width:3px ;
+    top:0;
+    right: 0px;
+    animation: ver 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+  #front-carousel .image figcaption div.b{
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    right: 0;
+      animation: hor 3s;
+      animation-delay: 6s;
+      animation-fill-mode: forwards;
+  }
+  #front-carousel .image figcaption div.l{
+    height:0% ;
+    width:3px ;
+    bottom:  0px;
+    left: 0px;
+   animation: ver 3s;
+   animation-delay: 9s;
+   animation-fill-mode: forwards;
+  }
+
+
+  #front-carousel .image figcaption p{
+  position: absolute;
+    font-size: 2vh;
+    color:white;
+    font-weight:900;
+    padding-left: 2vw;
+    padding-bottom: 5vh;
+    padding-top: 2vh;
+
+  }
+  #front-carousel .image figcaption h3{
+   position: absolute;
+    font-size: 7vh;
+    color: white;
+    font-weight: 900;
+    width: 135%;
+    top: 9vh;
+    padding-left: 2vw;
+
+  }
+  #front-carousel .image figcaption a{
+    color: white;
+    top: 50vh;
+    right: -2vw;
+    position: absolute;
+    width: 100%;
+    font-weight:500;
+  }
+
+  #slides figure img{ /*размер изображений слайдера*/
+	width: 100%;
+    height:79vh;
+}
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 90%; /*максимальнная длина*/
+  max-height: 90vh;
+}
+
+#switch1:checked ~ #controls label:nth-child(3),
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2){
+	background: url("../images/prev.png") no-repeat; /*заливка фона картинкой без повторений*/
+	float: left;
+	margin-left: 25px; /*сдвиг влево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+
+}
+#switch1:checked ~ #controls label:nth-child(2),
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(1){
+
+  background: url("../images/next.png") no-repeat; /*заливка фона картинкой без повторений*/
+	float: right;
+	margin-right: 25px; /*сдвиг вправо*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+.all input{/*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+
+}
+
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: -40% 0 0 0;
+	width: 100%;
+	bottom: 44vh;
+  position: absolute;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	display: inline-block; /*расположение в строку*/
+	width: 30px;
+	height: 7px;
+	background:white;
+}
+
+#active{ /*расположение блока с переключателями*/
+	right: 20vw;
+  bottom:40vh;
+
+	text-align: center;
+  position: absolute;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+	background: #cee002;
+
+	}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3)
+{
+	background: #cee002;
+
+
+}
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+	opacity: 0.2;
+}
+
+
+#switch1:checked ~ #play label:nth-child(1),
+#switch2:checked ~ #play label:nth-child(2),
+#switch3:checked ~ #play label:nth-child(3){
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: red;
+  top:20px;
+  right: 20px;
+
+
+}
+
+
+
+@keyframes sliding{
+  0% {left:0%;}
+  29% {left:0%;}
+  33% {left:-33.3%;}
+  62% {left:-33.3%;}
+  66% {left:-66.6%;}
+  96% {left:-66.6%;}
+  100% {left:0%;}
+
+}
+/*@media (min-aspect-ratio: 21/15){
+#front-carousel img{
+  max-width: 100%;
+  min-height: none;}
+
+}
+@media (max-aspect-ratio: 21/15){
+#front-carousel img{
+  max-width: none;
+  min-height: 100%;}
+
+}
+@media screen and(max-width:1000px){
+  #front-carousel figcaption{
+    left:15%;
+  }
+}
+*/
+@keyframes hor{
+  from{ width:0% }
+  to { width: 100%}
+ }
+@keyframes ver{
+  from{ height: 0% }
+  to { height:  100%}
+ }
+
+
+/*************************************page_2************************************/
+.clearfix{
+     width:100%;
+      clear:both;/*чтобы спустить header вниз*/
+}
+   #page_2{
+        padding:100px 0%;
+         width:100%;
+      }
+
+
+      #page_2 div:first-child{
+         width: 50%;
+         float: left;
+      }
+    #page_2 div:first-child h4{
+        color:#cee002;
+        padding-bottom: 20px;
+        padding-left: 65px;
+      }
+    #page_2 div:first-child h1{
+        color:white;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 65px;
+        font-size: 36px;
+        width: 85%;
+        float: left;
+      }
+    #page_2 div:first-child p{
+      color:#333;
+        padding-bottom: 20px;
+        padding-left: 65px;
+       line-height: 2;
+        width:88%;
+        float: left;
+      }
+    #page_2 div:first-child div{
+        float: left;
+        width: 150px;
+        height: 150px;;
+        border: 6px solid #cee002;
+        margin-top: 43px;
+        margin-left: 70px;
+   }
+    #page_2 div:first-child div h5{
+    font-size: 502%;
+    margin-top: 32px;
+    margin-left: 70px;
+    color: white;
+    position: absolute;
+  }
+  #page_2 div:first-child div h3:last-child{
+    margin-top: 47px;
+    margin-left: 165px;
+    color: white;
+    position: absolute;
+    width: 10%;
+  }
+
+#page_2 div:nth-child(2){
+         width: 50%;
+         float: right;
+      }
+#page_2 div:nth-child(2) div{
+        width: 455px;
+        height: 307px;
+        right: 146px;
+        margin-top: 325px;
+        background: url(../images/dots.png) 0 0 repeat;
+        position: absolute;
+      }
+
+#page_2 div:nth-child(2) img{
+        width: 451px;
+        height: 542px;
+        right: 66px;
+        position: absolute;
+        margin-left: 125px;
+      }
+
+/**************************************page3********************************      */
+
+#page_3{
+  padding:100px 0%;
+   width:100%;
+
+}
+
+#page_3 div.mpage_3{
+  padding-bottom: 150px;
+}
+#page_3 div.mpage_3 div:first-child h2{
+    font-size: 2.571rem;
+    color: #fff;
+    float: left;
+    padding-bottom: 25px;
+    padding-left: 66px;
+}
+#page_3 div.mpage_3 div:nth-child(2){
+    float: right;
+}
+#page_3 div.mpage_3 div:nth-child(2) div
+{
+    float: right;
+    padding-top: 18px;
+
+}
+#page_3 div.mpage_3 div:nth-child(2) div ul
+{
+    float:left;
+}
+#page_3 div.mpage_3 div:nth-child(2) div>a{
+    float:right;
+    padding-right: 59px;
+    color: white;
+    font-style:italic;
+    font-size: 16px;
+
+}
+#page_3 div.mpage_3 div:nth-child(2) div:first-child ul li
+{
+  float: left;
+}
+#page_3 div.mpage_3 div:nth-child(2) div:first-child ul li:first-child a
+{
+  padding-right: 40px;
+  color: white;
+  font-size: 18px;
+  }
+#page_3 div.mpage_3 div:nth-child(2) div:first-child ul li:nth-child(2) a
+{
+  padding-right: 40px;
+  color: white;
+  font-size: 18px;
+}
+#page_3 div.mpage_3 div:nth-child(2) div:first-child ul li:nth-child(3) a
+{
+
+  padding-right: 65px;
+  color: white;
+  font-size: 18px;
+}
+#carus_2{
+  margin-left: 5vw;
+  margin-right: 5vw;
+    overflow:hidden;
+
+}
+
+
+#carus_2 figure{
+  height: 83vh;
+  width: 28vw;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#carus_2 figure:nth-child(2){
+margin-left: 2vw;
+margin-right: 2vw;
+}
+#carus_2 figure img{
+  width: 100%;
+
+
+}
+#carus_2 figure p{
+  display: none;
+}
+#carus_2  figcaption{
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  width: 260px;
+}
+ #carus_2 figcaption h3{
+  color: #fff;
+  font-size: 30px;
+  bottom: 10vh;
+  /*position: absolute;*/
+}
+#carus_2 a{
+  color: #fff;
+  font-size: 14px;
+}
+
+#carus_2 figure:hover::before{
+  content: "";
+  background-color: rgba(206,224,2,.79);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+#carus_2 figure:hover h3,
+#carus_2 figure:hover a{
+  color: #000;
+  transition: 0.5s;
+}
+#carus_2 figure:hover p{
+  color: #000;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  line-height: 30px;
+  font-weight: lighter;
+  transition: 0.5s;
+}

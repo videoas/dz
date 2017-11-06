@@ -1,0 +1,97 @@
+section#front-progects
+{
+  border: 3px solid red;
+   width: 1250px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   background-color: #333;
+}
+/**************************************start menu************************ */
+#front-progects .nav h2,
+#front-progects .nav div
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+#front-progects .nav
+{
+  padding: 2em 0;
+  background-color:;
+}
+#front-progects .nav h2
+{
+  font-size: 2em;
+  padding-right: 435px;
+  color: white;
+}
+#front-progects .nav div a
+{
+  padding-left: 38px;
+
+  color: white;
+
+}
+#front-progects .nav div a:last-child
+{
+  padding-left: 76px;
+  font-style: italic;
+  color: #999999;
+  font-size: 14px;
+}
+
+
+/*********************************** staet carousel******************************* */
+#front-progects img,#front-progects figure
+{
+  width: 392px;
+  height: 100%;
+
+}
+#front-progects figure
+{
+  display: inline-block;
+}
+#front-progects figure:nth-child(2)
+{
+  margin-right: 35px;
+  margin-left: 35px;
+}
+
+#front-progects figure figcaption
+{
+  margin-top: -209px;
+  margin-bottom: 105px;
+
+
+}
+
+
+#front-progects figure figcaption h3
+{
+   font-size: 36px;
+   margin-left: 33px;
+   margin-bottom: 24px;
+   color: white;
+   width: 30%;
+}
+#front-progects figure figcaption a:nth-child(3)
+
+{
+     color: white;
+     margin-left: 7px;
+}
+#front-progects figure figcaption a:nth-child(2)
+{
+  color: white;
+  margin-left: -191px;
+}
+#front-progects figure
+{
+    background-color: red;
+}
+
+
+
+
+/*********************************** end carousel******************************* */*/

@@ -1,0 +1,61 @@
+section#frond-brands
+{
+  border: 3px solid red;
+   width: 1250px;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 1.8em;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   display: table;/*создам таблицу в блоке*/
+   background: url(../images/dots.png) #333 0 repeat;
+}
+section#frond-brands .developers
+{
+  display: table-row;
+}
+/*section#frond-brands .developers h2
+{
+  display: table-cell;
+}*/
+section#frond-brands .developers div
+{
+  display: table-cell;
+}
+
+section#frond-brands .partners
+{
+  display: table-row;/*   Элемент отображается как строка таблицы (тег <tr>).  */
+
+}
+
+section#frond-brands .partners a
+{
+  display:table-cell;/* Указывает, что элемент представляет собой ячейку таблицы (тег <td> или <th>). */
+  /*text-align: center;*/
+  /*height: 33px;*/
+
+}
+section#frond-brands .partners a:nth-child(1)
+{
+  background: url(../images/1.png) 0 0 no-repeat ;
+}
+section#frond-brands .partners a:nth-child(2)
+{
+  background: url(../images/2.png) 0 0 no-repeat;
+
+}
+section#frond-brands .partners a:nth-child(3)
+{
+  background: url(../images/3.png) 0 0 no-repeat;
+}
+section#frond-brands .partners a:nth-child(4)
+{
+  background: url(../images/4.png) 0 0 no-repeat;
+
+}
+section#frond-brands .partners a:nth-child(5)
+{
+  background: url(../images/5.png) 0 0 no-repeat;
+
+}
